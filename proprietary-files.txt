@@ -274,7 +274,7 @@ vendor/lib64/camera/components/com.qti.node.photosolid.so
 vendor/lib64/camera/components/com.qti.node.remosaic.so
 vendor/lib64/camera/components/com.qti.node.stich.so
 vendor/lib64/camera/components/com.qti.node.swregistration.so
-vendor/lib64/camera/components/com.qti.node.watermark.so
+vendor/lib64/camera/components/com.qti.node.watermark.so|bab22cdeca593f743440fdc7a3cef585b8ad5cad
 vendor/lib64/camera/components/com.qti.node.xiaomigenderage.so
 vendor/lib64/camera/components/com.qti.stats.aec.so
 vendor/lib64/camera/components/com.qti.stats.aecwrapper.so
@@ -424,10 +424,6 @@ vendor/lib64/libxml2_vendor.so
 vendor/etc/camera/megviifacepp_0_5_2_model
 vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libmegface.so
-
-# Camera provider
-vendor/lib/android.hardware.camera.provider@2.4-legacy.so
-vendor/lib64/android.hardware.camera.provider@2.4-legacy.so
 
 # CDSP
 vendor/bin/cdsprpcd
@@ -1058,6 +1054,12 @@ vendor/lib64/vendor.display.postproc@1.0.so
 
 # PowerOffAlarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
+
+# Protobuf
+vendor/lib/libprotobuf-cpp-full-3.9.1.so
+vendor/lib/libprotobuf-cpp-lite-3.9.1.so
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so
+vendor/lib64/libprotobuf-cpp-lite-3.9.1.so
 
 # Public libraries
 vendor/etc/public.libraries.txt
