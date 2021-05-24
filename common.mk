@@ -77,6 +77,9 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.atoll:32
 
+PRODUCT_COPY_FILES += \
+     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/audio/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
 # Component override
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/component-overrides.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sysconfig/component-overrides.xml
