@@ -181,6 +181,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Platform
 TARGET_BOARD_PLATFORM := atoll
 
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
+
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
 TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
