@@ -38,7 +38,43 @@ PRODUCT_PACKAGES += \
 # API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# TODO: Audio stuff
+# Audio
+PRODUCT_PACKAGES += \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0-impl \
+    android.hardware.audio.service \
+    android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.soundtrigger@2.2-impl
+
+PRODUCT_PACKAGES += \
+    audio.a2dp.default \
+    audio.bluetooth.default \
+    audio.primary.atoll \
+    audio.r_submix.default \
+    audio.usb.default \
+
+PRODUCT_PACKAGES += \
+    liba2dpoffload \
+    libaudiopreprocessing \
+    libaudio-resampler \
+    libbatterylistener \
+    libbundlewrapper \
+    libcomprcapture \
+    libdownmix \
+    libdynproc \
+    libeffectproxy \
+    libexthwplugin \
+    libhdmiedid \
+    libhfp \
+    libldnhncr \
+    libqcompostprocbundle \
+    libqcomvisualizer \
+    libqcomvoiceprocessing \
+    libreverbwrapper \
+    libsndmonitor \
+    libspkrprot \
+    libvisualizer \
+    libvolumelistener
 
 # Component override
 PRODUCT_COPY_FILES += \
