@@ -74,7 +74,8 @@ PRODUCT_PACKAGES += \
     libsndmonitor \
     libspkrprot \
     libvisualizer \
-    libvolumelistener
+    libvolumelistener \
+    sound_trigger.primary.atoll:32
 
 # Component override
 PRODUCT_COPY_FILES += \
