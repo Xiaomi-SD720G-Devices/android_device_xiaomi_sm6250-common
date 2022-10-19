@@ -385,6 +385,7 @@
         <transport>hwbinder</transport>
         <fqname>@1.1::IMlipayService/default</fqname>
     </hal>
+    <!-- Xiaomi additions -->
     <hal format="hidl">
         <name>vendor.xiaomi.hardware.mtdservice</name>
         <transport>hwbinder</transport>
@@ -410,4 +411,9 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::IVSIMService/default</fqname>
     </hal>
+    <hal format="hidl">
+        <name>android.hardware.media.c2</name>
+        <transport>hwbinder</transport>
+        <fqname>@1.0::IComponentStore/dolby</fqname>
+   </hal>
 </manifest>

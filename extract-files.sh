@@ -58,12 +58,16 @@ function blob_fixup() {
     vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
     echo 'madvise: 1' >> ${2}
     ;;
-    odm/etc/vintf/manifest/c2_manifest_xiaomi.xml)
-    sed -i 's|<hal format="hidl">|<hal format="hidl" override="true">|g' "${2}"
-    sed -i "/ozoaudio/d" "${2}"
-    ;;
     vendor/bin/hw/dolbycodec2)
     patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
+    patchelf --replace-needed libcodec2_hidl@1.0.so libcodec2_hidl@1.0.stock.so "${2}"
+    ;;
+    vendor/lib/libcodec2_hidl@1.0.stock.so)
+    patchelf --set-soname libcodec2_hidl@1.0.stock.so "${2}"
+    patchelf --replace-needed libcodec2_vndk.so libcodec2_vndk.stock.so "${2}"
+    ;;
+    vendor/lib/libcodec2_vndk.stock.so)
+    patchelf --set-soname libcodec2_vndk.stock.so "${2}"
     ;;
     esac
 }
