@@ -55,6 +55,9 @@ function blob_fixup() {
     "${PATCHELF}" --add-needed "libwatermark_shim.so" "${2}"
     ;;
     esac
+    vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
+    echo 'madvise: 1' >> ${2}
+    ;;
 }
 
 # Initialize the helper for common device
