@@ -326,6 +326,11 @@ PRODUCT_PACKAGES += \
     libc2dcolorconvert \
     libcodec2_vndk
 
+# Media - Dolby vision
+PRODUCT_PACKAGES += \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor
+
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
 

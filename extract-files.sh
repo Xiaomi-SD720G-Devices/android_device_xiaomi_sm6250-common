@@ -58,6 +58,10 @@ function blob_fixup() {
     vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
     echo 'madvise: 1' >> ${2}
     ;;
+    odm/etc/vintf/manifest/c2_manifest_xiaomi.xml)
+    sed -i 's|<hal format="hidl">|<hal format="hidl" override="true">|g' "${2}"
+    sed -i "/ozoaudio/d" "${2}"
+    ;;
     esac
 }
 
