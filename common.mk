@@ -97,20 +97,7 @@ PRODUCT_PACKAGES += \
     r-gsi.avbpubkey \
     s-gsi.avbpubkey
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    audio.bluetooth.default
-
-PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1.vendor \
-    android.hardware.bluetooth.audio-impl \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
-
-PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
+# TODO: Bluetooth stuff
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
