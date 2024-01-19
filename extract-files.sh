@@ -59,7 +59,6 @@ function blob_fixup() {
     echo 'madvise: 1' >> ${2}
     ;;
     vendor/bin/hw/dolbycodec2)
-    patchelf --replace-needed libavservices_minijail_vendor.so libavservices_minijail.so "${2}"
     patchelf --replace-needed libcodec2_hidl@1.0.so libcodec2_hidl@1.0.stock.so "${2}"
     ;;
     vendor/lib/libcodec2_hidl@1.0.stock.so)

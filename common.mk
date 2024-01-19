@@ -171,6 +171,9 @@ PRODUCT_PACKAGES += \
 # Dolby
 $(call inherit-product, hardware/Motorola/Dolby/dolby-setup.mk)
 
+# Dolby - Vision
+$(call inherit-product, hardware/Dolby-Vision/dolby-vision.mk)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
@@ -329,7 +332,19 @@ PRODUCT_PACKAGES += \
 # Media - Dolby vision
 PRODUCT_PACKAGES += \
     libcodec2_soft_common.vendor \
-    libsfplugin_ccodec_utils.vendor
+    libsfplugin_ccodec_utils.vendor \
+    libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl@1.1.vendor \
+    libcodec2_hidl@1.2.vendor \
+    libcodec2_vndk.vendor \
+    libminijail.vendor \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
+    android.hardware.media.c2@1.2.vendor \
+    com.android.media.swcodec \
+    libc2dcolorconvert \
+    libavservices_minijail.vendor \
+    libavservices_minijail_vendor
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
@@ -346,8 +361,7 @@ PRODUCT_COPY_FILES += \
 # Minijail
 PRODUCT_PACKAGES += \
     libminijail \
-    libavservices_minijail \
-    libavservices_minijail.vendor
+    libavservices_minijail
 
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/xiaomi/miuicamera/config.mk)
