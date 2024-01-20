@@ -318,13 +318,12 @@ PRODUCT_PACKAGES += \
     NotchBarKiller
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
-
 PRODUCT_PACKAGES += \
-   ApertureOverlay \
-   ApertureDevOverlay
+    CarrierConfigResCommon \
+    SM6250Frameworks \
+    TelephonyResCommon \
+    ApertureOverlay \
+    ApertureDevOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
